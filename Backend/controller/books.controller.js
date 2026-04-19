@@ -19,7 +19,6 @@ const creatBook = async (req,res)=>{
             message:"Book create successfully"
         })
     }catch (error) {
-        console.log(error)
         res.status(400).json({
             message:"Error you can't register"
         })
@@ -45,7 +44,6 @@ const allBooks = async (req,res)=>{
             books:books
         })
     } catch (error) {
-        console.log(error)
         res.status(400).json({
             message:"Error you can't see the books"
         })
@@ -74,7 +72,6 @@ const findbook = async (req,res)=>{
             Book:findBook
         })
     } catch (error) {
-        console.log(error)
         res.status(400).json({
             message:"Error you can't find the book"
         })
@@ -103,7 +100,6 @@ const updatebook = async (req,res)=>{
             message:"Book update Successfully",
         })
     }catch (error) {
-        console.log(error)
         res.status(400).json({
             message:"Error you can't change the  password"
         })
@@ -125,7 +121,6 @@ const deleteBook = async (req,res)=>{
             })
         }
     }catch (error) {
-        console.log(error)
         res.status(400).json({
             message:"Error you can't delete the  book"
         })

@@ -21,7 +21,7 @@ const AdminBookManager = () => {
   // 2. FETCH DATA (READ) - Removed Token Logic
   const fetchBooks = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/Api/Books/books");
+      const res = await axios.get("https://full-stack-library-management.vercel.app/Api/Books/books");
       
       // Safety check: Ensure we only set an array to state
       if (Array.isArray(res.data)) {
@@ -45,7 +45,7 @@ const AdminBookManager = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to permanently delete this book?")) {
       try {
-        await axios.delete(`http://localhost:3000/Api/Books/delete/${id}`);
+        await axios.delete(`https://full-stack-library-management.vercel.app/Api/Books/delete/${id}`);
         toast.success("Book deleted successfully!"); // Toast Success
         fetchBooks(); 
       } catch (error) {
@@ -60,10 +60,10 @@ const AdminBookManager = () => {
     e.preventDefault();
     try {
       if (modalMode === 'add') {
-        await axios.post("http://localhost:3000/Api/Books/creat", formData);
+        await axios.post("https://full-stack-library-management.vercel.app/Api/Books/creat", formData);
         toast.success("Book added successfully!"); // Toast Success
       } else {
-        await axios.put(`http://localhost:3000/Api/Books/update/${editId}`, formData);
+        await axios.put(`https://full-stack-library-management.vercel.app/Api/Books/update/${editId}`, formData);
         toast.success("Book updated successfully!"); // Toast Success
       }
       

@@ -78,10 +78,10 @@ const Login = async (req,res)=>{
         message:"Login Sucessfully",
         token:token,
         user: {
-                _id: userFind._id,
-                fullname: userFind.fullname,
-                email: userFind.email,
-                role: userFind.role,
+            _id: userFind._id,
+            fullname: userFind.fullname,
+            email: userFind.email,
+            role: userFind.role,
         }
         // data:userFind
     })

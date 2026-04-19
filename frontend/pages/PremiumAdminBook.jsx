@@ -27,7 +27,7 @@ const AdminBookManager = () => {
   // 2. FETCH DATA (READ) (Unchanged)
   const fetchBooks = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/Api/PremiumBooks/books");
+      const res = await axios.get("https://full-stack-library-management.vercel.app/Api/PremiumBooks/books");
       
       if (Array.isArray(res.data)) {
         setBooks(res.data);
@@ -50,7 +50,7 @@ const AdminBookManager = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to permanently delete this premium book?")) {
       try {
-        await axios.delete(`http://localhost:3000/Api/PremiumBooks/delete/${id}`);
+        await axios.delete(`https://full-stack-library-management.vercel.app/Api/PremiumBooks/delete/${id}`);
         toast.success("Premium book deleted!"); 
         fetchBooks(); 
       } catch (error) {
@@ -65,10 +65,10 @@ const AdminBookManager = () => {
     e.preventDefault();
     try {
       if (modalMode === 'add') {
-        await axios.post("http://localhost:3000/Api/PremiumBooks/creat", formData);
+        await axios.post("https://full-stack-library-management.vercel.app/Api/PremiumBooks/creat", formData);
         toast.success("Premium book added successfully!"); 
       } else {
-        await axios.put(`http://localhost:3000/Api/PremiumBooks/update/${editId}`, formData);
+        await axios.put(`https://full-stack-library-management.vercel.app/Api/PremiumBooks/update/${editId}`, formData);
         toast.success("Premium book updated!"); 
       }
       

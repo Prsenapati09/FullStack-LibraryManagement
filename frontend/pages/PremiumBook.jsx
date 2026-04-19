@@ -11,7 +11,7 @@ const PremiumBooks = () => {
   const fetchPremiumBooks = async () => {
     try {
       
-      const res = await axios.get("http://localhost:3000/Api/PremiumBooks/books");
+      const res = await axios.get("https://full-stack-library-management.vercel.app/Api/PremiumBooks/books");
       
       if (Array.isArray(res.data)) {
         setBooks(res.data);

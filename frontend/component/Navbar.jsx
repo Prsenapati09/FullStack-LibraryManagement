@@ -41,7 +41,7 @@ const Navbar = () => {
             <NavItem to="/contact" icon={<Mail size={18} />} label="Contact" />
             
             {/* --- ADMIN ONLY ROUTE (DESKTOP) --- */}
-            {user && user.role === "Admin" && (
+            {user && user.role === "admin" && (
                <NavItem 
                  to="/admin-dashboard" 
                  icon={<LayoutDashboard size={18} className="text-amber-400" />} 

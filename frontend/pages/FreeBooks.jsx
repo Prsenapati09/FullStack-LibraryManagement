@@ -12,7 +12,7 @@ const FreeBooks = () => {
   useEffect(() => {
     const fetchBooks = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/Api/Books/books");
+        const res = await axios.get("https://full-stack-library-management.vercel.app/Api/Books/books");
 
         if (Array.isArray(res.data)) {
           setBooks(res.data);
@@ -26,7 +26,6 @@ const FreeBooks = () => {
 
         setLoading(false);
       } catch (err) {
-        console.error("Error fetching books:", err);
         setError("Failed to load books. Please try again later.");
         setLoading(false);
       }
