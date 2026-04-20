@@ -2,7 +2,7 @@ import {useContext} from 'react'
 import { Link ,useNavigate } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Star, BookOpen } from 'lucide-react';
 import {AuthContext} from '../context/AuthContext'
-import HomeBookImage from '../assets/Bookimage.avif'
+import HomeBookImage from "../assets/Bookimage.jpg"
 
 const HeroFullScreen = () => {
   const { user } = useContext(AuthContext);

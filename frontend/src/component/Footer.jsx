@@ -33,9 +33,9 @@ const Footer = () => {
             <h3 className="text-white font-semibold text-lg mb-6">Discover</h3>
             <ul className="space-y-4 text-sm">
               <li><FooterLink to="/" text="Home" /></li>
-              <li><FooterLink to="/bestsellers" text="Bestsellers" /></li>
-              <li><FooterLink to="/new-arrivals" text="New Arrivals" /></li>
-              <li><FooterLink to="/authors" text="Featured Authors" /></li>
+              <li><FooterLink to="/about" text="About" /></li>
+              <li><FooterLink to="/books" text="Books" /></li>
+              <li><FooterLink to="/prime" text="Premium" /></li>
             </ul>
           </div>
 
@@ -90,9 +90,9 @@ const Footer = () => {
               &copy; {new Date().getFullYear()} BookNova Store. All rights reserved.
             </p>
             <div className="flex gap-8 text-sm text-gray-500">
-              <Link to="/privacy" className="hover:text-indigo-400 transition">Privacy Policy</Link>
-              <Link to="/terms" className="hover:text-indigo-400 transition">Terms of Service</Link>
-              <Link to="/cookies" className="hover:text-indigo-400 transition">Cookie Settings</Link>
+              <p className="hover:text-indigo-400 transition">Privacy Policy</p>
+              <p className="hover:text-indigo-400 transition">Terms of Service</p>
+              <p className="hover:text-indigo-400 transition">Cookie Settings</p>
             </div>
           </div>
         </div>
