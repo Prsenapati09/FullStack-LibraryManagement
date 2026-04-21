@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BookOpen, Award, Users, Globe, ArrowRight } from 'lucide-react';
-import AboutBookImage from "../assets/Aboutimage.avif"
+import AboutBookImage from "../assets/book.jpg"
 
 const About = () => {
   return (
