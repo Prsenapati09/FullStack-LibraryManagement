@@ -32,17 +32,17 @@ const Login = () => {
         // 4. Use Context to handle state and storage
         login(res.data.token); 
         
-        alert("Login Successful!");
-        // Toaster.success("Login Sucessfully 🎉")
-
+        
         // 5. Check role from response OR decoded token
         // (Assuming res.data.user exists, otherwise use jwtDecode in context)
         const userRole = res.data.user?.role || "User"; 
-
+        
         if (userRole === "Admin") {
-             navigate("/admin-dashboard");
+          navigate("/admin-dashboard");
+          toaster.success("Login Sucessfully 🎉")
         } else {
-             navigate("/");
+          navigate("/");
+          toaster.success("Login Sucessfully 🎉")
         }
       }
     } catch (err) {
