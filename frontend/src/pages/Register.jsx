@@ -24,7 +24,6 @@ const Signup = () => {
 
     try {
       const res = await axios.post("https://full-stack-library-management.vercel.app/Api/users/signup", userInfo);
-      console.log(res.data);
       
       if (res.data) {
         toast.success("Register successfully");
@@ -36,7 +35,7 @@ const Signup = () => {
       }
     } catch (err) {
       if (err.response) {
-        console.log(err);
+
         toast.error("Error: " + err.response.data.message); // Changed to toast for consistency
       }
     }
